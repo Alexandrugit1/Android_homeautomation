@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_reports"
+        android:title="Reports"
+        android:icon="@drawable/ic_nav_event"
+        android:color="#fff"/>
+
+    <item
+        android:id="@+id/nav_control"
+        android:title="Control"
+        android:icon="@drawable/ic_nav_control"
+        android:color="#fff"/>
+
+    <item
+        android:id="@+id/nav_heating"
+        android:title="Heating"
+        android:icon="@drawable/ic_nav_heat"
+        android:color="#fff"/>
+
+</menu>

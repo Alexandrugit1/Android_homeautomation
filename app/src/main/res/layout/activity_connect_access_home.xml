@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/connectAccessHomeMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6FC4BD"
+    tools:context=".ConnectionPart.ActivityConnectAccessHome">
+
+    <ImageView
+        android:id="@+id/connectAccessHomeLogo"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:src="@drawable/ic_universe2_svg"
+        app:layout_constraintBottom_toTopOf="@id/connectAccessHomeCenterLayout"
+        app:layout_constraintDimensionRatio="630:248"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#fff" />
+
+    <LinearLayout
+        android:id="@+id/connectAccessHomeCenterLayout"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".9">
+
+        <TextView
+            android:id="@+id/connectAccessHomeCurrentTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp">
+
+            <Spinner
+                android:id="@+id/connectAccessHomeBluetoothSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5sp"
+                android:popupBackground="#6FC4BD"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/connectAccessHomeConnectButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/connectAccessHomeConnectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:background="@drawable/button_with_white_border"
+                android:padding="10sp"
+                android:stateListAnimator="@null"
+                android:text="@string/connect"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/connectAccessHomeBluetoothSpinner"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10sp">
+
+            <TextView
+                android:id="@+id/connectAccessHomeConnectionText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/connectAccessHomeEnterButton"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10sp"
+                android:layout_marginEnd="5sp"
+                android:layout_weight="1"
+                android:background="@drawable/button_with_white_border"
+                android:stateListAnimator="@null"
+                android:text="@string/enter"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/connectAccessHomeLeaveButton"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10sp"
+                android:layout_marginStart="5sp"
+                android:layout_weight="1"
+                android:background="@drawable/button_with_white_border"
+                android:stateListAnimator="@null"
+                android:text="@string/leave"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10sp">
+
+            <TextView
+                android:id="@+id/connectAccessHomePermissionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/connectAccessHomeTransparentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/connectAccessHomeBTOnFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:backgroundTint="#6FC4BD"
+        android:scaleType="center"
+        android:src="@drawable/ic_bluetooth_on"
+        android:tint="#FFF"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="36sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/connectAccessHomeBToffFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:backgroundTint="#6FC4BD"
+        android:scaleType="center"
+        android:src="@drawable/ic_bluetooth_off"
+        android:tint="#FFF"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="36sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/connectAccessHomeHomeFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:backgroundTint="#6FC4BD"
+        android:scaleType="center"
+        android:src="@drawable/ic_home"
+        android:tint="#FFF"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="36sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/connectAccessHomeLogoutFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:backgroundTint="#6FC4BD"
+        android:scaleType="center"
+        android:src="@drawable/ic_exit"
+        android:tint="#FFF"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="36sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/connectAccessHomeMenuFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+
+        android:scaleType="center"
+        android:src="@drawable/ic_add"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="36sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/connectAccessHomeLogoutFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:backgroundTint="#fff"
+            android:scaleType="center"
+            android:src="@drawable/ic_exit"
+            android:tint="#6FC4BD"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/connectAccessHomeBTOnFAB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:maxImageSize="36sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/connectAccessHomeBTOnFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:backgroundTint="#fff"
+            android:scaleType="center"
+            android:src="@drawable/ic_bluetooth_on"
+            android:tint="#6FC4BD"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/connectAccessHomeBToffFAB"
+            app:layout_constraintStart_toEndOf="@id/connectAccessHomeLogoutFAB"
+            app:maxImageSize="36sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/connectAccessHomeBToffFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:backgroundTint="#fff"
+            android:scaleType="center"
+            android:src="@drawable/ic_bluetooth_off"
+            android:tint="#6FC4BD"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/connectAccessHomeHomeFAB"
+            app:layout_constraintStart_toEndOf="@id/connectAccessHomeBTOnFAB"
+            app:maxImageSize="36sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/connectAccessHomeHomeFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:backgroundTint="#fff"
+            android:scaleType="center"
+            android:src="@drawable/ic_home"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/connectAccessHomeBToffFAB"
+            app:maxImageSize="36sp" />
+
+    -->

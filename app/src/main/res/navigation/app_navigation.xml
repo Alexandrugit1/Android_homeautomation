@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/app_navigation"
+    app:startDestination="@id/fragmentReports">
+
+    <fragment
+        android:id="@+id/fragmentReports"
+        android:name="com.example.homeautomation.MainPart.FragmentReports"
+        android:label="FragmentReports" />
+    <fragment
+        android:id="@+id/fragmentControl"
+        android:name="com.example.homeautomation.MainPart.FragmentControl"
+        android:label="FragmentControl" />
+    <fragment
+        android:id="@+id/fragmentHeating"
+        android:name="com.example.homeautomation.MainPart.FragmentHeating"
+        android:label="FragmentHeating" />
+</navigation>

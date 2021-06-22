@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.homeautomation">
+
+    <uses-permission android:name="android.hardware.bluetooth" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/universe_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/universe_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".StartingPart.ActivitySplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainPart.ActivityHome"
+            android:parentActivityName=".ConnectionPart.ActivityConnectAccessHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConnectionPart.ActivityConnectAccessHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AuthenticationPart.ActivityRegister"
+            android:parentActivityName=".AuthenticationPart.ActivityLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AuthenticationPart.ActivityLogin"
+            android:screenOrientation="portrait" />
+
+        <!--        <receiver android:name=".ConnectionPart.PairingRequest">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />-->
+        <!--                <action android:name="android.bluetooth.device.action.PAIRING_CANCEL" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+    </application>
+
+</manifest>

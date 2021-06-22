@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_75"> 75sp </dimen>
+    <dimen name="standard_150"> 150sp </dimen>
+    <dimen name="standard_225"> 225sp </dimen>
+    <dimen name="standard_300"> 300sp </dimen>
+>>>>>>> bd86591... Adding validation for authentication
+</resources>
